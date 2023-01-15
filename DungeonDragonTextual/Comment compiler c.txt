@@ -1,0 +1,7 @@
+g++ main.cpp -o TEST
+.\TEST.exe
+
+si plusieur fichiers
+
+g++ main.cpp De.cpp -o TEST
+.\TEST.exe
