@@ -17,3 +17,16 @@ void Joueur::creationPsedo()
     std::cin >> psedo;  
 
 }
+
+void Joueur::ajouterObjet(int objet){
+    if (tailleTableau < 10) {
+        inventaire_tableau[tailleTableau] = objet;
+        nombreObjetsInventaire++;
+        tailleTableau++;
+        }
+    else {
+        std::cout << "Tableau plein, impossible d'ajouter un nouvel objet.";
+    }
+}
+
+void supprimerObjet() {}

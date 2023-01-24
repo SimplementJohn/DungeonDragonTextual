@@ -17,6 +17,7 @@ public:
     bool estEnVie();
     
     void afficherPointDeVie();
+    int attaque(int pointDeVie, int lanceDe6Joueur, int lanceDe6Entite);
 
 };
 

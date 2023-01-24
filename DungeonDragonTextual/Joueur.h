@@ -12,7 +12,13 @@ public:
     Joueur();                           //Constructeur de joueur
     ~Joueur();                          //Destructeur de joueur
     std::string psedo;
+    int inventaire_tableau[10];         //création d'un inventaire du joueur sur 10 emplacement
+    int tailleTableau;
+    int nombreObjetsInventaire;
+
     void creationPsedo();
+    void ajouterObjet(int objet); 
+    void supprimerObjet();
 };
 
 #endif //JOUEUR

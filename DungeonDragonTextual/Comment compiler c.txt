@@ -5,3 +5,7 @@ si plusieur fichiers
 
 g++ main.cpp De.cpp -o TEST
 .\TEST.exe
+
+g++ DungeonDragonTextual.cpp De.cpp Donjon.cpp Entite.cpp Joueur.cpp Monstre.cpp Mo
+nstreElite.cpp Objet.cpp Arme.cpp Bouclier.cpp Potion.cpp IHM.cpp -o preg
+.\preq

@@ -5,6 +5,7 @@
 
 #define SIXFACE 6
 #define DEUXFACE 2
+#define TROISFACE 3
 
 class De                            //creation de la classe dé 
 {
