@@ -22,5 +22,3 @@ public:
 };
 
 #endif //ENTITE_H
-
-//TESTTTT
