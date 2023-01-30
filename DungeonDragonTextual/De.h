@@ -2,6 +2,7 @@
 #define DE_H
 
 #include <iostream>
+#include <chrono>
 
 #define SIXFACE 6
 #define DEUXFACE 2

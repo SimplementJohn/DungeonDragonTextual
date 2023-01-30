@@ -41,7 +41,8 @@ int main()
             //Creation des monstres du Dungeon  
             Monstre Monstre1(monDe6.lancerDe());
 
-            choixUtilisateur = IHM.attenteChoixUtilisateur();
+            choixUtilisateur = 1;
+            //choixUtilisateur = IHM.attenteChoixUtilisateur();
 
     if (choixUtilisateur == 0)         //Choix par défault c'est la Generation du jeu, Donjon, Joueur etc
     {
@@ -58,13 +59,10 @@ int main()
             IHM.effacerTerminal();                  //On rafrechi le terminal en effacent tout
             IHM.afficherJoueurEtChateau();          //On affiche le joueur et le chateau
 
-            Joueur1.creationPsedo();
-                    
-            Monstre1.afficherPointDeVie();
+            Monstre1.afficherPointDeVie(MONSTRE);
             Joueur1.attaque(Monstre1.pointDeVie, monDe6.lancerDe(), monDe6.lancerDe());
-            Monstre1.afficherPointDeVie();
+            Monstre1.afficherPointDeVie(MONSTRE);
 
-  
         }   
         
     if (choixUtilisateur == 2)         //Choix 2 affichage des credits

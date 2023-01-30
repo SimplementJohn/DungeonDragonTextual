@@ -3,6 +3,9 @@
 
 #include <iostream>
 
+#define JOUEUR 0
+#define MONSTRE 1
+
 class Entite                            //creation de la classe Entite
 {
 private:
@@ -16,7 +19,7 @@ public:
     bool enVie;
     bool estEnVie();
     
-    void afficherPointDeVie();
+    void afficherPointDeVie(bool entite);
     int attaque(int pointDeVie, int lanceDe6Joueur, int lanceDe6Entite);
 
 };
