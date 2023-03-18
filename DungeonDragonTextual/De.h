@@ -2,7 +2,6 @@
 #define DE_H
 
 #include <iostream>
-#include <chrono>
 
 #define SIXFACE 6
 #define DEUXFACE 2
@@ -19,7 +18,11 @@ public:
     De(int nombreDeFace);                           //Constructeur de l'objet dé
     ~De();                          //Destructeur de l'objet dé
 
-    int lancerDe();    //Création de la méthode lancé de dé
+    int lancerDe();          //Création de la méthode lancé de dé
+    //int getNbFace() const;
+    void setNbFace(int nbDeFace);
+    
+      
 
 };
 

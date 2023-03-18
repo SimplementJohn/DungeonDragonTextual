@@ -10,16 +10,9 @@ Entite::~Entite() //destruction de l'objet entite, dans la classe entite
 {
 }
 
-void Entite::afficherPointDeVie(bool entite)
+void Entite::afficherPointDeVie()
 {
-    if (entite == 0)
-    {
-        std::cout << "Voici le nombre de point de vie : " << pointDeVie << " du joueur. "; 
-    }else{
-        std::cout << "Voici le nombre de point de vie : " << pointDeVie << " du Monstre. "; 
-    }
-    
-
+    std::cout << "Voici le nombre de point de vie : " << pointDeVie << " de l'entite, "; 
 }
 
 bool Entite::estEnVie()
@@ -37,11 +30,17 @@ bool Entite::estEnVie()
 
 int Entite::attaque(int pointDeVieCible, int lanceDe6Joueur, int lanceDe6Entite){
     if (lanceDe6Joueur >= lanceDe6Entite){          //Si le joueur à un lancé supérieur ou égal au monstre il le touche
-        std::cout << "Le Joueur a reussi sont attaque, ";
+        std::cout << "Le Joueur à reussi sont attaque, ";
         pointDeVieCible = pointDeVieCible - lanceDe6Joueur;
     }
     else{                                           //Sinon le monstre esquive
-        std::cout << "Le Monstre a esquive ! "; 
+        std::cout << "Le Monstre à esquivé ! "; 
     }
     return pointDeVieCible;                              //on renvoie le nombre de point de Vie
 }
+
+/*
+int Entite::setPointDeVie(int pointDeVie){
+    this->pointDeVie = pointDeVie;
+}
+*/

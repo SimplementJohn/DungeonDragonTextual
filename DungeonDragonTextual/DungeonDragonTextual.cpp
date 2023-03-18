@@ -19,6 +19,7 @@ int choixUtilisateur = 0;                  //Creation de notre variable choixUti
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////    
 int main()
 {
+
     //Creation de L'IHM
     IHM IHM;                //Creation de l'objet IHM dans la classe IHM
     IHM.effacerTerminal();  //Effacement du terminal pour eviter d'avoir du texte parasite
@@ -40,37 +41,30 @@ int main()
     //Creation des monstres du Dungeon  
     Monstre Monstre1(monDe6.lancerDe());
 
-    choixUtilisateur = IHM.attenteChoixUtilisateurMenu();
+    //pour sortir de l'initialisation
+    choixUtilisateur = IHM.attenteChoixUtilisateur();
 
+    if (choixUtilisateur == 0)         //Choix par défault c'est la Generation du jeu, Donjon, Joueur etc
+    {
+
+
+
+        
+
+    }  
     
-    
-    if (choixUtilisateur == 1)         //Choix 1 Lancement Jeux
+    if (choixUtilisateur == 1)         //Choix 1 Lancement du Jeu
         {
 
-            IHM.effacerTerminal();
-            IHM.afficherJoueurEtChateau();
-            IHM.afficherChargementFini();
+            IHM.effacerTerminal();                  //On rafrechi le terminal en effacent tout
+            IHM.afficherJoueurEtChateau();          //On affiche le joueur et le chateau
 
+            //Joueur1.creationPsedo();
+                    
+            Monstre1.afficherPointDeVie();
+            Joueur1.attaque(Monstre1.pointDeVie, monDe6Joueur.lancerDe(), monDe6Monstre.lancerDe());
+            Monstre1.afficherPointDeVie();
 
-
-            //Creation du Donjon de jeu
-            Donjon monDonjon(monDe6.lancerDe()); 
-
-
-            IHM.effacerTerminal();                                  //On rafrechi le terminal en effacent tout
-            IHM.afficherJoueurEtChateau();                          //On affiche le joueur et le chateau
-
-            for (int i = 1 ; i <= monDonjon.nombreEtage; i++)       //Pour chaque étage jouer le jeu
-            {
-                IHM.effacerTerminal();                              //On rafrechi le terminal en effacent tout
-                IHM.afficherMonstreEtJoueur();                      //On affiche le joueur et le monstre
-                IHM.attenteChoixUtilisateur();
-
-                Joueur1.attaque(Monstre1.pointDeVie, monDe6.lancerDe(), monDe6.lancerDe());
-                Monstre1.afficherPointDeVie(MONSTRE);
-                IHM.afficherJoueurAttaqueMonstre();
-        
-            }
         }   
         
     if (choixUtilisateur == 2)         //Choix 2 affichage des credits

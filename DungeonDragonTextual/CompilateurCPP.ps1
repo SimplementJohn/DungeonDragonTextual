@@ -1,4 +1,4 @@
-g++ DungeonDragonTextual.cpp De.cpp Donjon.cpp Entite.cpp Joueur.cpp Monstre.cpp MonstreElite.cpp Objet.cpp Arme.cpp Bouclier.cpp Potion.cpp IHM.cpp -o preg
+g++ DungeonDragonTextual.cpp De.cpp Donjon.cpp Entite.cpp Joueur.cpp Monstre.cpp MonstreElite.cpp Objet.cpp Potion.cpp Arme.cpp Bouclier.cpp -o preg
 clear
 .\preg.exe
 Write-Output ""
